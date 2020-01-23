@@ -3,9 +3,9 @@ body {
     background-attachment: fixed;
     background-size: cover;
     background-image: url("https://cdn2.alphr.com/sites/alphr/files/2015/07/windows_10_light_and_mirror_background_0.jpg");
+    font-family: 'Segoe UI', sans-serif;
 }
 .window {
-    font-family: 'Segoe UI', sans-serif;
     box-shadow:0 0 32px hsla(0deg, 0%, 0%, 50%);
 }
 .window .window-titlebar {
@@ -79,19 +79,16 @@ body {
     left: 0;
     width: 100%;
     height: 40px;
-    background-color: hsl(200deg, 32%, 24%);
+    background-color: hsla(200deg, 50%, 5%, 75%);
 }
 .taskbar-item {
     background-position: 50% 50%;
     background-repeat: no-repeat;
-    background-size: 24px;
+    background-size: 22px;
     width: 48px;
     height: 40px;
     margin-right: 1px;
     border-bottom-color: hsla(0deg, 0%, 100%, 50%);
-}
-.taskbar-item:nth-child(1) {
-    margin-right: 3px;
 }
 .taskbar-item.opened {
     height: 38px;
@@ -104,21 +101,142 @@ body {
 .taskbar-item:active {
     background-color: hsla(0deg, 0%, 100%, 5%);
 }
-.taskbar-item.active {
+.taskbar-item.focus {
     background-color: hsla(0deg, 0%, 100%, 15%);
 }
-.taskbar-item.active:hover {
+.taskbar-item.focus:hover {
     background-color: hsla(0deg, 0%, 100%, 25%);
 }
-.taskbar-item.active:active {
+.taskbar-item.focus:active {
     background-color: hsla(0deg, 0%, 100%, 20%);
 }
-.start-menu {
+.taskbar-startbutton {
+    display: flex;
+    margin-right: 2px;
+}
+.taskbar-startbutton .taskbar-item {
+    background-size: 16px;
+}
+.taskbar-windows {
+    display: flex;
+}
+.startmenu {
     position: absolute;
     bottom: 40px;
     left: 0;
     width: 648px;
-    height: 648px;
-    background-color: hsl(200deg, 32%, 12%);
-    display: none;
+    height: calc(100% - 40px);
+    max-height: 648px;
+    background-color: hsla(200deg, 32%, 12%, 99%);
+    backdrop-filter: blur(10px);
+    display: flex;
 }
+.startmenu-left-menu {
+    flex: 0;
+    display: flex;
+    flex-direction: column;
+    width: 48px;
+    height: 100%;
+}
+.startmenu-left-menu-top {
+    flex: 1;
+    align-self: flex-start;
+}
+.startmenu-left-menu-bottom {
+    flex: 0;
+    align-self: flex-end;
+}
+.startmenu-left-menu-item {
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: 16px;
+    width: 48px;
+    height: 48px;
+}
+.startmenu-programs {
+    /*flex: 1;*/
+    width: 260px;
+    margin-left: 12px;
+    overflow-y: auto;
+}
+.startmenu-programs:after {
+    content: " ";
+    height: 54px;
+    display: block;
+}
+.startmenu-programs .startmenu-program-section {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.startmenu-programs .startmenu-program {
+    display: flex;
+    height: 36px;
+}
+.startmenu-programs .program-icon {
+    background-color: #2997cc;
+    background-position: 50% 50%;
+    background-size: 20px;
+    background-repeat: no-repeat;
+    width: 32px;
+    height: 32px;
+    align-self: center;
+    justify-self: center;
+    margin: 2px 4px;
+}
+.startmenu-programs .program-title {
+    flex: 1;
+    font-size: 12px;
+    color: #ffffff;
+    line-height: 32px;
+    margin: 2px 4px;
+}
+.startmenu-programs .program-option {
+    
+}
+.startmenu-left-menu-item:hover,
+.startmenu-program:hover {
+    background-color: hsl(0deg, 0%, 100%, 10%);
+}
+
+/*
+ICONS
+*/
+.icon-useravatar {
+    padding: 14px;
+    width: 20px;
+    height: 20px;
+}
+.icon-useravatar img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    overflow: hidden;
+    object-fit: cover;
+}
+
+.icon-windows-logo-black { background-image: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20256%20257%22%20preserveAspectRatio%3D%22xMidYMid%22%3E%3Cpath%20d%3D%22M0%2036.357L104.62%2022.11l.045%20100.914-104.57.595L0%2036.358zm104.57%2098.293l.08%20101.002L.081%20221.275l-.006-87.302%20104.494.677zm12.682-114.405L255.968%200v121.74l-138.716%201.1V20.246zM256%20135.6l-.033%20121.191-138.716-19.578-.194-101.84L256%20135.6z%22%20fill%3D%22%23000000%22%2F%3E%3C%2Fsvg%3E'); }
+.startmenu-icon, .icon-windows-logo-white { background-image: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20256%20257%22%20preserveAspectRatio%3D%22xMidYMid%22%3E%3Cpath%20d%3D%22M0%2036.357L104.62%2022.11l.045%20100.914-104.57.595L0%2036.358zm104.57%2098.293l.08%20101.002L.081%20221.275l-.006-87.302%20104.494.677zm12.682-114.405L255.968%200v121.74l-138.716%201.1V20.246zM256%20135.6l-.033%20121.191-138.716-19.578-.194-101.84L256%20135.6z%22%20fill%3D%22%23FFFFFF%22%2F%3E%3C%2Fsvg%3E'); }
+.startmenu-icon:hover, .icon-windows-logo { background-image: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20256%20257%22%20preserveAspectRatio%3D%22xMidYMid%22%3E%3Cpath%20d%3D%22M0%2036.357L104.62%2022.11l.045%20100.914-104.57.595L0%2036.358zm104.57%2098.293l.08%20101.002L.081%20221.275l-.006-87.302%20104.494.677zm12.682-114.405L255.968%200v121.74l-138.716%201.1V20.246zM256%20135.6l-.033%20121.191-138.716-19.578-.194-101.84L256%20135.6z%22%20fill%3D%22%236CB5D9%22%2F%3E%3C%2Fsvg%3E'); }
+
+.icon-chrome { background-image: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20435.816%20437.46%22%3E%3Cpath%20d%3D%22M217.341.039s128.478-5.783%20196.57%20123.337H206.416s-39.188-1.289-72.593%2046.255c-9.634%2019.916-19.91%2040.473-8.349%2080.937C108.773%20222.309%2036.823%2097.04%2036.823%2097.04S87.578%205.176%20217.341.039z%22%20fill%3D%22%23c6352e%22%2F%3E%3Cpath%20d%3D%22M407.223%20327.871s-59.247%20114.143-205.118%20108.533c17.995-31.148%20103.772-179.682%20103.772-179.682s20.709-33.289-3.744-85.991c-12.431-18.305-25.09-37.486-65.919-47.713%2032.836-.326%20177.285.021%20177.285.021s54.168%2089.891-6.276%20204.832z%22%20fill%3D%22%23f4d911%22%2F%3E%3Cpath%20d%3D%22M28.373%20328.738s-69.224-108.395%208.58-231.908c17.979%2031.16%20103.71%20179.72%20103.71%20179.72s18.469%2034.578%2076.341%2039.756c22.061-1.609%2045.007-2.982%2074.279-33.223-16.139%2028.594-88.673%20153.521-88.673%20153.521S97.681%20438.56%2028.373%20328.738z%22%20fill%3D%22%2381b354%22%2F%3E%3Cpath%20d%3D%22M202.105%20437.46l29.187-121.793s32.092-2.504%2058.982-32.017c-16.693%2029.365-88.169%20153.81-88.169%20153.81z%22%20fill%3D%22%237baa50%22%2F%3E%3Cpath%20d%3D%22M119.59%20220.093c0-53.69%2043.52-97.215%2097.215-97.215%2053.69%200%2097.214%2043.524%2097.214%2097.215%200%2053.693-43.522%2097.219-97.214%2097.219-53.695%200-97.215-43.525-97.215-97.219z%22%20fill%3D%22%23fff%22%2F%3E%3ClinearGradient%20id%3D%22a%22%20gradientUnits%3D%22userSpaceOnUse%22%20x1%3D%22-829.128%22%20y1%3D%221417.339%22%20x2%3D%22-829.128%22%20y2%3D%221261.441%22%20gradientTransform%3D%22matrix(1%200%200%20-1%201045.93%201557.636)%22%3E%3Cstop%20offset%3D%220%22%20stop-color%3D%22%23a2c0e6%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23406cb1%22%2F%3E%3C%2FlinearGradient%3E%3Cpath%20d%3D%22M135.86%20220.093c0-44.702%2036.238-80.941%2080.945-80.941%2044.698%200%2080.94%2036.239%2080.94%2080.941%200%2044.703-36.242%2080.945-80.94%2080.945-44.707.001-80.945-36.244-80.945-80.945z%22%20fill%3D%22url(%23a)%22%2F%3E%3Cpath%20d%3D%22M413.5%20123.039l-120.183%2035.237s-18.123-26.596-57.104-35.258c33.776-.115%20177.287.021%20177.287.021z%22%20fill%3D%22%23e7ce12%22%2F%3E%3Cpath%20d%3D%22M123.137%20246.197c-16.89-29.25-86.31-149.16-86.31-149.16l89.029%2088.07s-9.149%2018.82-5.68%2045.7l2.961%2015.39z%22%20fill%3D%22%23bc332c%22%2F%3E%3C%2Fsvg%3E'); }
+.icon-explorer { background-image: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20enable-background%3D%22new%200%200%2024%2024%22%20id%3D%22Layer_1%22%20version%3D%221.1%22%20viewBox%3D%220%200%2024%2024%22%20xml%3Aspace%3D%22preserve%22%3E%3Cpath%20d%3D%22M12%2C8.5H0V3c0-0.5522847%2C0.4477153-1%2C1-1h8.5L12%2C4V8.5z%22%20fill%3D%22%23D79300%22%2F%3E%3Cpath%20d%3D%22M23%2C4H12L9.5%2C6H1C0.4477153%2C6%2C0%2C6.4477153%2C0%2C7v13c0%2C0.5522842%2C0.4477153%2C1%2C1%2C1h22%20c0.5522842%2C0%2C1-0.4477158%2C1-1V5C24%2C4.4477153%2C23.5522842%2C4%2C23%2C4z%22%20fill%3D%22%23FED55F%22%2F%3E%3Cpath%20d%3D%22M19%2C12H5c-0.5522847%2C0-1%2C0.4477148-1%2C1v8.5C4%2C21.7761421%2C4.2238574%2C22%2C4.5%2C22h3%20C7.7761426%2C22%2C8%2C21.7761421%2C8%2C21.5V16h8v5.5c0%2C0.2761421%2C0.2238579%2C0.5%2C0.5%2C0.5h3c0.2761421%2C0%2C0.5-0.2238579%2C0.5-0.5V13%20C20%2C12.4477148%2C19.5522842%2C12%2C19%2C12z%22%20fill%3D%22%233A96DD%22%2F%3E%3C%2Fsvg%3E'); }
+.icon-vscode { background-image: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20256%20256%22%20fill%3D%22none%22%3E%20%3Cmask%20id%3D%22mask0%22%20mask-type%3D%22alpha%22%20maskUnits%3D%22userSpaceOnUse%22%20x%3D%220%22%20y%3D%220%22%20width%3D%22256%22%20height%3D%22256%22%3E%20%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M181.534%20254.252C185.566%20255.823%20190.164%20255.722%20194.234%20253.764L246.94%20228.403C252.478%20225.738%20256%20220.132%20256%20213.983V42.0181C256%2035.8689%20252.478%2030.2638%20246.94%2027.5988L194.234%202.23681C188.893%20-0.333132%20182.642%200.296344%20177.955%203.70418C177.285%204.191%20176.647%204.73454%20176.049%205.33354L75.149%2097.3862L31.1992%2064.0247C27.1079%2060.9191%2021.3853%2061.1735%2017.5855%2064.63L3.48936%2077.4525C-1.15853%2081.6805%20-1.16386%2088.9926%203.47785%2093.2274L41.5926%20128L3.47785%20162.773C-1.16386%20167.008%20-1.15853%20174.32%203.48936%20178.548L17.5855%20191.37C21.3853%20194.827%2027.1079%20195.081%2031.1992%20191.976L75.149%20158.614L176.049%20250.667C177.645%20252.264%20179.519%20253.467%20181.534%20254.252ZM192.039%2069.8853L115.479%20128L192.039%20186.115V69.8853Z%22%20fill%3D%22white%22%2F%3E%20%3C%2Fmask%3E%20%3Cg%20mask%3D%22url(%23mask0)%22%3E%20%3Cpath%20d%3D%22M246.94%2027.6383L194.193%202.24138C188.088%20-0.698302%20180.791%200.541721%20175.999%205.33332L3.32371%20162.773C-1.32082%20167.008%20-1.31548%20174.32%203.33523%20178.548L17.4399%20191.37C21.2421%20194.827%2026.9682%20195.081%2031.0619%20191.976L239.003%2034.2269C245.979%2028.9347%20255.999%2033.9103%20255.999%2042.6667V42.0543C255.999%2035.9078%20252.478%2030.3047%20246.94%2027.6383Z%22%20fill%3D%22%230065A9%22%2F%3E%20%3Cg%20filter%3D%22url(%23filter0_d)%22%3E%20%3Cpath%20d%3D%22M246.94%20228.362L194.193%20253.759C188.088%20256.698%20180.791%20255.458%20175.999%20250.667L3.32371%2093.2272C-1.32082%2088.9925%20-1.31548%2081.6802%203.33523%2077.4523L17.4399%2064.6298C21.2421%2061.1733%2026.9682%2060.9188%2031.0619%2064.0245L239.003%20221.773C245.979%20227.065%20255.999%20222.09%20255.999%20213.333V213.946C255.999%20220.092%20252.478%20225.695%20246.94%20228.362Z%22%20fill%3D%22%23007ACC%22%2F%3E%20%3C%2Fg%3E%20%3Cg%20filter%3D%22url(%23filter1_d)%22%3E%20%3Cpath%20d%3D%22M194.196%20253.763C188.089%20256.7%20180.792%20255.459%20176%20250.667C181.904%20256.571%20192%20252.389%20192%20244.039V11.9606C192%203.61057%20181.904%20-0.571175%20176%205.33321C180.792%200.541166%20188.089%20-0.700607%20194.196%202.23648L246.934%2027.5985C252.476%2030.2635%20256%2035.8686%20256%2042.0178V213.983C256%20220.132%20252.476%20225.737%20246.934%20228.402L194.196%20253.763Z%22%20fill%3D%22%231F9CF0%22%2F%3E%20%3C%2Fg%3E%20%3Cg%20style%3D%22mix-blend-mode%3Aoverlay%22%20opacity%3D%220.25%22%3E%20%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M181.378%20254.252C185.41%20255.822%20190.008%20255.722%20194.077%20253.764L246.783%20228.402C252.322%20225.737%20255.844%20220.132%20255.844%20213.983V42.0179C255.844%2035.8687%20252.322%2030.2636%20246.784%2027.5986L194.077%202.23665C188.737%20-0.333299%20182.486%200.296177%20177.798%203.70401C177.129%204.19083%20176.491%204.73437%20175.892%205.33337L74.9927%2097.386L31.0429%2064.0245C26.9517%2060.9189%2021.229%2061.1734%2017.4292%2064.6298L3.33311%2077.4523C-1.31478%2081.6803%20-1.32011%2088.9925%203.3216%2093.2273L41.4364%20128L3.3216%20162.773C-1.32011%20167.008%20-1.31478%20174.32%203.33311%20178.548L17.4292%20191.37C21.229%20194.827%2026.9517%20195.081%2031.0429%20191.976L74.9927%20158.614L175.892%20250.667C177.488%20252.264%20179.363%20253.467%20181.378%20254.252ZM191.883%2069.8851L115.323%20128L191.883%20186.115V69.8851Z%22%20fill%3D%22url(%23paint0_linear)%22%2F%3E%20%3C%2Fg%3E%20%3C%2Fg%3E%20%3Cdefs%3E%20%3Cfilter%20id%3D%22filter0_d%22%20x%3D%22-21.4896%22%20y%3D%2240.5225%22%20width%3D%22298.822%22%20height%3D%22236.149%22%20filterUnits%3D%22userSpaceOnUse%22%20color-interpolation-filters%3D%22sRGB%22%3E%20%3CfeFlood%20flood-opacity%3D%220%22%20result%3D%22BackgroundImageFix%22%2F%3E%20%3CfeColorMatrix%20in%3D%22SourceAlpha%22%20type%3D%22matrix%22%20values%3D%220%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%20127%200%22%2F%3E%20%3CfeOffset%2F%3E%20%3CfeGaussianBlur%20stdDeviation%3D%2210.6667%22%2F%3E%20%3CfeColorMatrix%20type%3D%22matrix%22%20values%3D%220%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200.25%200%22%2F%3E%20%3CfeBlend%20mode%3D%22overlay%22%20in2%3D%22BackgroundImageFix%22%20result%3D%22effect1_dropShadow%22%2F%3E%20%3CfeBlend%20mode%3D%22normal%22%20in%3D%22SourceGraphic%22%20in2%3D%22effect1_dropShadow%22%20result%3D%22shape%22%2F%3E%20%3C%2Ffilter%3E%20%3Cfilter%20id%3D%22filter1_d%22%20x%3D%22154.667%22%20y%3D%22-20.6735%22%20width%3D%22122.667%22%20height%3D%22297.347%22%20filterUnits%3D%22userSpaceOnUse%22%20color-interpolation-filters%3D%22sRGB%22%3E%20%3CfeFlood%20flood-opacity%3D%220%22%20result%3D%22BackgroundImageFix%22%2F%3E%20%3CfeColorMatrix%20in%3D%22SourceAlpha%22%20type%3D%22matrix%22%20values%3D%220%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%20127%200%22%2F%3E%20%3CfeOffset%2F%3E%20%3CfeGaussianBlur%20stdDeviation%3D%2210.6667%22%2F%3E%20%3CfeColorMatrix%20type%3D%22matrix%22%20values%3D%220%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200.25%200%22%2F%3E%20%3CfeBlend%20mode%3D%22overlay%22%20in2%3D%22BackgroundImageFix%22%20result%3D%22effect1_dropShadow%22%2F%3E%20%3CfeBlend%20mode%3D%22normal%22%20in%3D%22SourceGraphic%22%20in2%3D%22effect1_dropShadow%22%20result%3D%22shape%22%2F%3E%20%3C%2Ffilter%3E%20%3ClinearGradient%20id%3D%22paint0_linear%22%20x1%3D%22127.844%22%20y1%3D%220.659988%22%20x2%3D%22127.844%22%20y2%3D%22255.34%22%20gradientUnits%3D%22userSpaceOnUse%22%3E%20%3Cstop%20stop-color%3D%22white%22%2F%3E%20%3Cstop%20offset%3D%221%22%20stop-color%3D%22white%22%20stop-opacity%3D%220%22%2F%3E%20%3C%2FlinearGradient%3E%20%3C%2Fdefs%3E%20%3C%2Fsvg%3E'); }
+
+.icon-hamburger-white { background-image: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20viewBox%3D%220%200%2016%2016%22%3E%20%3Crect%20x%3D%220%22%20y%3D%224%22%20width%3D%2216%22%20height%3D%221%22%20fill%3D%22%23ffffff%22%2F%3E%20%3Crect%20x%3D%220%22%20y%3D%228%22%20width%3D%2216%22%20height%3D%221%22%20fill%3D%22%23ffffff%22%2F%3E%20%3Crect%20x%3D%220%22%20y%3D%2212%22%20width%3D%2216%22%20height%3D%221%22%20fill%3D%22%23ffffff%22%2F%3E%20%3C%2Fsvg%3E'); }
+
+
+
+.icon-default { background-image: url('data:image/svg+xml,'); }
+.icon-default { background-image: url('data:image/svg+xml,'); }
+.icon-default { background-image: url('data:image/svg+xml,'); }
+
+
+/*
+UTIL
+*/
+
+.background-noise { background-image: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20style%3D%22%20%22%3E%20%3Cfilter%20id%3D%22noise%22%3E%20%3CfeTurbulence%20type%3D%22fractalNoise%22%20baseFrequency%3D%220.99%22%20stitchTiles%3D%22stitch%22%3E%3C%2FfeTurbulence%3E%20%3C%2Ffilter%3E%20%3Crect%20opacity%3D%220.1%22%20filter%3D%22url(%23noise)%22%20style%3D%22%20%22%20width%3D%22100%25%22%20height%3D%22100%25%22%3E%3C%2Frect%3E%20%3C%2Fsvg%3E'); }
+
+
+
