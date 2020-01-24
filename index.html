@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
         <title></title>
         <link rel="stylesheet" type="text/css" href="style.css">
+        <script type="application/javascript" src="script.js" defer=""></script>
     </head>
     <body>
         <div class="window">
@@ -42,7 +43,7 @@
                 Conteúdo da janela aqui<br>
             </div>
         </div>
-        <div class="startmenu background-noise">
+        <div class="startmenu background-noise" id="startmenu">
             <div class="startmenu-left-menu">
                 <div class="startmenu-left-menu-top">
                     <div class="startmenu-left-menu-item icon-hamburger-white"></div>
@@ -51,10 +52,10 @@
                     <div class="startmenu-left-menu-item icon-useravatar">
                         <img src="https://i.picsum.photos/id/338/64/64.jpg">
                     </div>
-                    <div class="startmenu-left-menu-item icon-hamburger-white icon-documents-white"></div>
-                    <div class="startmenu-left-menu-item icon-hamburger-white icon-photos-white"></div>
-                    <div class="startmenu-left-menu-item icon-hamburger-white icon-settings-white"></div>
-                    <div class="startmenu-left-menu-item icon-hamburger-white icon-shutdown-white"></div>
+                    <div class="startmenu-left-menu-item icon-documents-white"></div>
+                    <div class="startmenu-left-menu-item icon-photos-white"></div>
+                    <div class="startmenu-left-menu-item icon-settings-white"></div>
+                    <div class="startmenu-left-menu-item icon-shutdown-white"></div>
                 </div>
             </div>
             <div class="startmenu-programs">
@@ -63,37 +64,27 @@
                         <div class="program-title">A</div>
                     </li>
                     <li class="startmenu-program">
-                        <div class="program-icon icon-chrome"></div>
-                        <div class="program-title">Adobe Creative Cloud</div>
-                        <div class="program-options"></div>
-                    </li>
-                    <li class="startmenu-program">
-                        <div class="program-icon icon-chrome"></div>
+                        <div class="program-icon icon-photoshop"></div>
                         <div class="program-title">Adobe Photoshop CC 2019</div>
                         <div class="program-options"></div>
                     </li>
                     <li class="startmenu-program">
-                        <div class="program-icon icon-chrome"></div>
+                        <div class="program-icon icon-premiere"></div>
                         <div class="program-title">Adobe Premiere Pro 2019</div>
                         <div class="program-options"></div>
                     </li>
                     <li class="startmenu-program">
-                        <div class="program-icon icon-chrome"></div>
-                        <div class="program-title">Adobe Premiere Rush</div>
-                        <div class="program-options"></div>
-                    </li>
-                    <li class="startmenu-program">
-                        <div class="program-icon icon-chrome"></div>
+                        <div class="program-icon icon-adobexd"></div>
                         <div class="program-title">Adobe XD</div>
                         <div class="program-options"></div>
                     </li>
                     <li class="startmenu-program">
-                        <div class="program-icon icon-chrome"></div>
+                        <div class="program-icon icon-clock-white"></div>
                         <div class="program-title">Alarmes e Relógio</div>
                         <div class="program-options"></div>
                     </li>
                     <li class="startmenu-program">
-                        <div class="program-icon icon-chrome"></div>
+                        <div class="program-icon icon-androidstudio"></div>
                         <div class="program-title">Android Studio</div>
                         <div class="program-options"></div>
                     </li>
@@ -103,28 +94,53 @@
                         <div class="program-title">C</div>
                     </li>
                     <li class="startmenu-program">
-                        <div class="program-icon icon-chrome"></div>
+                        <div class="program-icon icon-calc-white"></div>
                         <div class="program-title">Calculadora</div>
                         <div class="program-options"></div>
                     </li>
                     <li class="startmenu-program">
-                        <div class="program-icon icon-chrome"></div>
+                        <div class="program-icon icon-calendar-white"></div>
                         <div class="program-title">Calendário</div>
                         <div class="program-options"></div>
                     </li>
                     <li class="startmenu-program">
-                        <div class="program-icon icon-chrome"></div>
+                        <div class="program-icon icon-camera-white"></div>
                         <div class="program-title">Câmera</div>
                         <div class="program-options"></div>
                     </li>
                     <li class="startmenu-program">
-                        <div class="program-icon icon-chrome"></div>
+                        <div class="program-icon icon-weather-white"></div>
                         <div class="program-title">Clima</div>
                         <div class="program-options"></div>
                     </li>
                     <li class="startmenu-program">
-                        <div class="program-icon icon-chrome"></div>
+                        <div class="program-icon icon-settings-white"></div>
                         <div class="program-title">Configurações</div>
+                        <div class="program-options"></div>
+                    </li>
+                </ul>
+                <ul class="startmenu-program-section">
+                    <li class="startmenu-program">
+                        <div class="program-title">E</div>
+                    </li>
+                    <li class="startmenu-program">
+                        <div class="program-icon icon-eclipse"></div>
+                        <div class="program-title">Eclipse</div>
+                        <div class="program-options"></div>
+                    </li>
+                </ul>
+                <ul class="startmenu-program-section">
+                    <li class="startmenu-program">
+                        <div class="program-title">E</div>
+                    </li>
+                    <li class="startmenu-program">
+                        <div class="program-icon icon-movies-white"></div>
+                        <div class="program-title">Filmes</div>
+                        <div class="program-options"></div>
+                    </li>
+                    <li class="startmenu-program">
+                        <div class="program-icon icon-photos-white"></div>
+                        <div class="program-title">Fotos</div>
                         <div class="program-options"></div>
                     </li>
                 </ul>
@@ -137,19 +153,39 @@
                         <div class="program-title">Google Chrome</div>
                         <div class="program-options"></div>
                     </li>
+                </ul>
+                <ul class="startmenu-program-section">
                     <li class="startmenu-program">
-                        <div class="program-icon icon-chrome"></div>
-                        <div class="program-title">Google Chrome</div>
+                        <div class="program-title">M</div>
+                    </li>
+                    <li class="startmenu-program">
+                        <div class="program-icon icon-ms-edge"></div>
+                        <div class="program-title">Microsoft Edge</div>
                         <div class="program-options"></div>
                     </li>
                     <li class="startmenu-program">
-                        <div class="program-icon icon-chrome"></div>
-                        <div class="program-title">Google Chrome</div>
+                        <div class="program-icon icon-ms-store"></div>
+                        <div class="program-title">Microsoft Store</div>
                         <div class="program-options"></div>
                     </li>
                     <li class="startmenu-program">
-                        <div class="program-icon icon-chrome"></div>
-                        <div class="program-title">Google Chrome</div>
+                        <div class="program-icon icon-minecraft"></div>
+                        <div class="program-title">Minecraft</div>
+                        <div class="program-options"></div>
+                    </li>
+                    <li class="startmenu-program">
+                        <div class="program-icon icon-minecraft-educational"></div>
+                        <div class="program-title">Minecraft: Education Edition</div>
+                        <div class="program-options"></div>
+                    </li>
+                </ul>
+                <ul class="startmenu-program-section">
+                    <li class="startmenu-program">
+                        <div class="program-title">V</div>
+                    </li>
+                    <li class="startmenu-program">
+                        <div class="program-icon icon-vscode" style="background-color: #282828"></div>
+                        <div class="program-title">Visual Studio Code</div>
                         <div class="program-options"></div>
                     </li>
                 </ul>
@@ -157,7 +193,7 @@
         </div>
         <div class="taskbar background-noise">
             <div class="taskbar-startbutton">
-                <div class="taskbar-item startmenu-icon"></div>
+                <div class="taskbar-item startmenu-icon" id="startmenu-toggle-button"></div>
             </div>
             <div class="taskbar-windows">
                 <div class="taskbar-item icon-explorer focus opened"></div>
