@@ -1,0 +1,34 @@
+
+.win10 .icon-dynamic-startbutton,
+.win10 .icon-volume,
+.win10 .icon-ethernet,
+.win10 .icon-wifi,
+.win10 .icon-notification,
+.win10 .icon-menu,
+.win10 .icon-file,
+.win10 .icon-images,
+.win10 .icon-power,
+.win10 .icon-settings {
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.win10 .icon-dynamic-startbutton { background-size: 16px; background-image: url('../icons/startbutton.svg'); }
+.win10 .icon-dynamic-startbutton:hover { background-size: 16px; background-image: url('../icons/startbutton-color.svg'); }
+.win10 .icon-volume,
+.win10 .icon-volume[data-volume='2'] { background-image: url('../icons/volume-2.svg'); }
+.win10 .icon-volume[data-volume='1'] { background-image: url('../icons/volume-1.svg'); }
+.win10 .icon-volume[data-volume='0'] { background-image: url('../icons/volume-0.svg'); }
+.win10 .icon-volume[data-volume='-1'] { background-image: url('../icons/volume-mute.svg'); }
+.win10 .icon-volume[data-volume='-1'] { background-image: url('../icons/volume-mute.svg'); }
+.win10 .icon-ethernet { background-image: url('../icons/ethernet.svg'); }
+.win10 .icon-ethernet[data-connection='0'] { background-image: url(''); }
+.win10 .icon-wifi { background-image: url('../icons/wifi.svg'); }
+.win10 .icon-wifi[data-connection='0'] { background-image: url('../icons/wifi-off.svg'); }
+.win10 .icon-notification { background-image: url('../icons/notification.svg'); }
+.win10 .icon-notification[data-notifications='0'] { background-image: url('../icons/notification-none.svg'); }
+
+.win10 .icon-menu { background-image: url('../icons/menu.svg'); }
+.win10 .icon-file { background-image: url('../icons/file.svg'); }
+.win10 .icon-images { background-image: url('../icons/images.svg'); }
+.win10 .icon-power { background-image: url('../icons/power.svg'); }
+.win10 .icon-settings { background-image: url('../icons/settings.svg'); }

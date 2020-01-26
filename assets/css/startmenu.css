@@ -1,0 +1,209 @@
+@keyframes win10-open-startmenu {
+    0%, 50% {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    100% {
+        opacity: 1;
+    }
+}
+.win10 .startmenu {
+    position: absolute;
+    display: none;
+    padding-top: 4px;
+    left: 0;
+    bottom: 40px;
+    width: min-content;
+    max-width: calc(100% - 80px);
+    max-height: 648px;
+    height: calc(100% - 80px);
+    background-color: hsl(200deg, 50%, 5%, 90%);
+    background-image: url('../icons/noise.svg');
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 5px #000000;
+    overflow: hidden;
+    animation-name: win10-open-startmenu;
+    animation-duration: 600ms;
+    animation-delay: -300ms;
+}
+.win10 .startmenu.opened {
+    display: flex;
+    animation-direction: normal;
+}
+.win10 .startmenu-options,
+.win10 .startmenu-programs,
+.win10 .startmenu-tiles {
+    overflow: auto;
+    animation-name: win10-open-startmenu;
+    animation-duration: 600ms;
+}
+.win10 .startmenu-options {
+    display: flex;
+    flex-direction: column;
+    width: 48px;
+    margin-right: 12px;
+    animation-delay: -300ms;
+}
+.win10 .startmenu-options-top {
+    flex: 1;
+}
+.win10 .startmenu-options-top,
+.win10 .startmenu-options-bottom {
+    display: flex;
+    flex-direction: column;
+}
+.win10 .startmenu ul {
+    list-style-type: none;
+}
+.win10 .startmenu-item {
+    display: flex;
+    padding: 1px;
+}
+.win10 .startmenu-item-icon {
+    margin: 1px;
+    padding: 8px;
+    width: 28px;
+    height: 28px;
+    background-size: 20px;
+}
+.win10 .startmenu-item:hover {
+    padding: 0px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: hsla(0deg, 0%, 75%, 50%);
+    background-color: hsla(0deg, 0%, 50%, 50%);
+}
+.win10 .startmenu-item-icon.image-icon img {
+    width: 100%;
+    height: 100%;
+}
+.win10 .startmenu-item-icon.user-avatar img {
+    border-radius: 50%;
+}
+.win10 .startmenu-options .startmenu-item-text,
+.win10 .startmenu-options .startmenu-item-options {
+    display: none;
+}
+.win10 .startmenu-programs {
+    animation-delay: -200ms;
+}
+.win10 .startmenu-programs:after {
+    content: " ";
+    display: block;
+    height: 54px;
+}
+.win10 .startmenu-programs .startmenu-item-icon {
+    padding: 4px;
+    width: 24px;
+    height: 24px;
+    background-color: #2997cc;
+}
+.win10 .startmenu-programs .startmenu-item {
+    width: 244px;
+    transition: transform 50ms;
+}
+.win10 .startmenu-programs .startmenu-item:not(.startmenu-programs-label):active {
+    transform: scale(0.975);
+}
+.win10 .startmenu-item-text {
+    flex: 1;
+    padding: 8px;
+    color: #ffffff;
+    font-size: 12px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.win10 .startmenu-tiles {
+    padding-left: 16px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    animation-delay: -150ms;
+}
+.win10 .tile-group {
+    display: flex;
+    flex-direction: column;
+    padding: 12px 16px 0 0;
+}
+.win10 .tile-group-title {
+    margin-left: 2px;
+    padding-bottom: 12px;
+    max-width: 104px;
+    height: 16px;
+    color: #ffffff;
+    font-size: 12px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.win10 .tile-row {
+    display: flex;
+    height: fit-content;
+}
+.win10 .tile-column {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    flex-basis: 104px;
+    height: fit-content;
+}
+.win10 .startmenu-tiles .tile-large,
+.win10 .startmenu-tiles .tile-wide,
+.win10 .startmenu-tiles .tile-medium,
+.win10 .startmenu-tiles .tile-small {
+    margin: 2px 2px;
+    background-color: #2997cc;
+    background-size: cover;
+    transition: transform 50ms;
+}
+.win10 .startmenu-tiles .tile-large:hover,
+.win10 .startmenu-tiles .tile-wide:hover,
+.win10 .startmenu-tiles .tile-medium:hover,
+.win10 .startmenu-tiles .tile-small:hover {
+    border-style: solid;
+    border-width: 2px;
+    border-color: hsla(0deg, 0%, 75%, 50%);
+}
+.win10 .startmenu-tiles .tile-large:active,
+.win10 .startmenu-tiles .tile-wide:active,
+.win10 .startmenu-tiles .tile-medium:active,
+.win10 .startmenu-tiles .tile-small:active {
+    transform: scale(0.975);
+}
+.win10 .startmenu-tiles .tile-invisible {
+    visibility: hidden;
+}
+.win10 .startmenu-tiles .tile-large {
+    width: 204px;
+    height: 204px;
+}
+.win10 .startmenu-tiles .tile-wide {
+    width: 204px;
+    height: 100px;
+}
+.win10 .startmenu-tiles .tile-medium {
+    width: 100px;
+    height: 100px;
+}
+.win10 .startmenu-tiles .tile-small {
+    width: 48px;
+    height: 48px;
+}
+.win10 .startmenu-tiles .tile-large:hover {
+    width: 200px;
+    height: 200px;
+}
+.win10 .startmenu-tiles .tile-wide:hover {
+    width: 200px;
+    height: 96px;
+}
+.win10 .startmenu-tiles .tile-medium:hover {
+    width: 96px;
+    height: 96px;
+}
+.win10 .startmenu-tiles .tile-small:hover {
+    width: 44px;
+    height: 44px;
+}
+

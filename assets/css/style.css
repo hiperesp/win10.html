@@ -1,0 +1,16 @@
+.win10 * {
+    margin: 0;
+    padding: 0;
+}
+.win10 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/background.png');
+    background-image: url('https://cdn2.alphr.com/sites/alphr/files/2015/07/windows_10_light_and_mirror_background_0.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    image-rendering: pixelated;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}

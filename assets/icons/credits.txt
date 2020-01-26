@@ -1,0 +1,35 @@
+Arquivos por autor:
+    Desconhecido:
+        ./startbutton.svg
+        ./startbutton-color.svg
+    hiperesp:
+        ./menu.svg
+        ./noise.svg
+        ./programs/browser.png
+        ./programs/calculator.png
+        ./programs/code.png
+        ./programs/file-explorer.png
+        ./programs/settings.png
+        ./programs/store.png
+    Material Design:
+        ./volume-2.svg
+        ./volume-1.svg
+        ./volume-0.svg
+        ./volume-mute.svg
+        ./ethernet.svg
+        ./wifi.svg
+        ./wifi-off.svg
+        ./notification.svg
+        ./notification-none.svg
+        ./file.svg
+        ./images.svg
+        ./power.svg
+    Icons8:
+        ./settings.svg
+
+
+Autores:
+    Desconhecido: ?
+    hiperesp: https://github.com/hiperesp
+    Material Design: https://material.io
+    Icons8: https://icons8.com

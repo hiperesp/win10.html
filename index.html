@@ -1,208 +1,260 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta cherset="utf-8">
+        <meta charset="utf-8">
         <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
         <title></title>
-        <link rel="stylesheet" type="text/css" href="style.css">
-        <script type="application/javascript" src="script.js" defer=""></script>
+        <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/taskbar.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/icons.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/startmenu.css">
+        <script type="application/javascript" src="assets/js/script.js" defer=""></script>
+        <style>
+html, body {
+    height: 100%;
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+        </style>
     </head>
     <body>
-        <div class="window">
-            <div class="window-titlebar">
-                <div class="window-draggable"></div>
-                <div class="window-appicon icon-chrome"></div>
-                <div class="window-title">Chrome</div>
-                <div class="window-controls">
-                    <div class="window-icon window-minimize"></div>
-                    <div class="window-icon window-maximize"></div>
-                    <div class="window-icon window-close"></div>
+        <div class="win10">
+            <div class="startmenu" data-win10-script="startMenu">
+                <div class="startmenu-options">
+                    <ul class="startmenu-options-top">
+                        <li class="startmenu-item">
+                            <div class="startmenu-item-icon icon-menu"></div>
+                            <div class="startmenu-item-text startmenu-text-title">Iniciar</div>
+                            <div class="startmenu-item-options"></div>
+                        </li>
+                    </ul>
+                    <ul class="startmenu-options-bottom">
+                        <li class="startmenu-item">
+                            <div class="startmenu-item-icon image-icon user-avatar">
+                                <img src="https://i.picsum.photos/id/212/512/512.jpg">
+                            </div>
+                            <div class="startmenu-item-text">Gabriel Hiperesp</div>
+                            <div class="startmenu-item-options"></div>
+                        </li>
+                        <li class="startmenu-item">
+                            <div class="startmenu-item-icon icon-file"></div>
+                            <div class="startmenu-item-text">Documentos</div>
+                            <div class="startmenu-item-options"></div>
+                        </li>
+                        <li class="startmenu-item">
+                            <div class="startmenu-item-icon icon-images"></div>
+                            <div class="startmenu-item-text">Imagens</div>
+                            <div class="startmenu-item-options"></div>
+                        </li>
+                        <li class="startmenu-item">
+                            <div class="startmenu-item-icon icon-settings"></div>
+                            <div class="startmenu-item-text">Configurações</div>
+                            <div class="startmenu-item-options"></div>
+                        </li>
+                        <li class="startmenu-item">
+                            <div class="startmenu-item-icon icon-power"></div>
+                            <div class="startmenu-item-text">Ligar/Desligar</div>
+                            <div class="startmenu-item-options"></div>
+                        </li>
+                    </ul>
                 </div>
-            </div>
-            <div class="window-content">
-                Conteúdo da janela aqui<br>
-                Conteúdo da janela aqui<br>
-                Conteúdo da janela aqui<br>
-                Conteúdo da janela aqui<br>
-                Conteúdo da janela aqui<br>
-            </div>
-        </div><br>
-        <div class="window">
-            <div class="window-titlebar">
-                <div class="window-draggable"></div>
-                <div class="window-appicon icon-explorer"></div>
-                <div class="window-title">Explorador de Arquivos</div>
-                <div class="window-controls">
-                    <div class="window-icon window-minimize"></div>
-                    <div class="window-icon window-maximize"></div>
-                    <div class="window-icon window-close"></div>
+                <div class="startmenu-programs">
+                    <ul class="startmenu-programs-section">
+                        <li class="startmenu-item startmenu-programs-label">
+                            <div class="startmenu-item-text">A</div>
+                        </li>
+                        <li class="startmenu-item">
+                            <div class="startmenu-item-icon image-icon" style="background-color: #804080">
+                                <img src="http://icons.iconarchive.com/icons/dakirby309/simply-styled/64/Adobe-After-Effects-icon.png">
+                            </div>
+                            <div class="startmenu-item-text">Adobe After Effects</div>
+                            <div class="startmenu-item-options"></div>
+                        </li>
+                        <li class="startmenu-item">
+                            <div class="startmenu-item-icon image-icon" style="background-color: #8080ff">
+                                <img src="https://icons.iconarchive.com/icons/dakirby309/simply-styled/64/Adobe-Photoshop-icon.png">
+                            </div>
+                            <div class="startmenu-item-text">Adobe Photoshop</div>
+                            <div class="startmenu-item-options"></div>
+                        </li>
+                        <li class="startmenu-item">
+                            <div class="startmenu-item-icon image-icon" style="background-color: #8000ff">
+                                <img src="http://icons.iconarchive.com/icons/dakirby309/simply-styled/64/Adobe-Premiere-Pro-icon.png">
+                            </div>
+                            <div class="startmenu-item-text">Adobe Premiere</div>
+                            <div class="startmenu-item-options"></div>
+                        </li>
+                        <li class="startmenu-item">
+                            <div class="startmenu-item-icon image-icon" style="background-color: #dd40ff">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Adobe_XD_CC_icon.svg/64px-Adobe_XD_CC_icon.svg.png">
+                            </div>
+                            <div class="startmenu-item-text">Adobe XD</div>
+                            <div class="startmenu-item-options"></div>
+                        </li>
+                        <li class="startmenu-item">
+                            <div class="startmenu-item-icon image-icon">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Android_Studio_icon.svg/64px-Android_Studio_icon.svg.png">
+                            </div>
+                            <div class="startmenu-item-text">Android Studio</div>
+                            <div class="startmenu-item-options"></div>
+                        </li>
+                    </ul>
+                    <ul class="startmenu-programs-section">
+                        <li class="startmenu-item startmenu-programs-label">
+                            <div class="startmenu-item-text">C</div>
+                        </li>
+                        <li class="startmenu-item">
+                            <div class="startmenu-item-icon image-icon">
+                                <img src="http://icons.iconarchive.com/icons/hopstarter/software/64/Half-Life-Counter-Strike-icon.png">
+                            </div>
+                            <div class="startmenu-item-text">Counter-Strike: Source</div>
+                            <div class="startmenu-item-options"></div>
+                        </li>
+                    </ul>
+                    <ul class="startmenu-programs-section">
+                        <li class="startmenu-item startmenu-programs-label">
+                            <div class="startmenu-item-text">E</div>
+                        </li>
+                        <li class="startmenu-item">
+                            <div class="startmenu-item-icon image-icon">
+                                <img src="http://icons.iconarchive.com/icons/papirus-team/papirus-apps/64/eclipse-icon.png">
+                            </div>
+                            <div class="startmenu-item-text">Eclipse</div>
+                            <div class="startmenu-item-options"></div>
+                        </li>
+                    </ul>
+                    <ul class="startmenu-programs-section">
+                        <li class="startmenu-item startmenu-programs-label">
+                            <div class="startmenu-item-text">G</div>
+                        </li>
+                        <li class="startmenu-item">
+                            <div class="startmenu-item-icon image-icon" style="background-color: #404040">
+                                <img src="http://icons.iconarchive.com/icons/google/chrome/64/Google-Chrome-icon.png">
+                            </div>
+                            <div class="startmenu-item-text">Google Chrome</div>
+                            <div class="startmenu-item-options"></div>
+                        </li>
+                    </ul>
+                    <ul class="startmenu-programs-section">
+                        <li class="startmenu-item startmenu-programs-label">
+                            <div class="startmenu-item-text">R</div>
+                        </li>
+                        <li class="startmenu-item">
+                            <div class="startmenu-item-icon image-icon">
+                                <img src="http://icons.iconarchive.com/icons/papirus-team/papirus-apps/64/rocket-league-icon.png">
+                            </div>
+                            <div class="startmenu-item-text">Rocket League</div>
+                            <div class="startmenu-item-options"></div>
+                        </li>
+                    </ul>
+                    <ul class="startmenu-programs-section">
+                        <li class="startmenu-item startmenu-programs-label">
+                            <div class="startmenu-item-text">S</div>
+                        </li>
+                        <li class="startmenu-item">
+                            <div class="startmenu-item-icon image-icon">
+                                <img src="http://icons.iconarchive.com/icons/papirus-team/papirus-apps/64/steam-icon.png">
+                            </div>
+                            <div class="startmenu-item-text">Steam</div>
+                            <div class="startmenu-item-options"></div>
+                        </li>
+                    </ul>
+                    <ul class="startmenu-programs-section">
+                        <li class="startmenu-item startmenu-programs-label">
+                            <div class="startmenu-item-text">V</div>
+                        </li>
+                        <li class="startmenu-item">
+                            <div class="startmenu-item-icon image-icon">
+                                <img src="http://icons.iconarchive.com/icons/dakirby309/simply-styled/64/Microsoft-Visual-Studio-icon.png">
+                            </div>
+                            <div class="startmenu-item-text">Visual Studio 2019</div>
+                            <div class="startmenu-item-options"></div>
+                        </li>
+                        <li class="startmenu-item">
+                            <div class="startmenu-item-icon image-icon" style="background-color: #404040">
+                                <img src="http://icons.iconarchive.com/icons/papirus-team/papirus-apps/64/visual-studio-code-icon.png">
+                            </div>
+                            <div class="startmenu-item-text">Visual Studio Code</div>
+                            <div class="startmenu-item-options"></div>
+                        </li>
+                        <li class="startmenu-item">
+                            <div class="startmenu-item-icon image-icon" style="background-color: #404040">
+                                <img src="http://icons.iconarchive.com/icons/papirus-team/papirus-apps/64/visual-studio-code-insiders-icon.png">
+                            </div>
+                            <div class="startmenu-item-text">Visual Studio Code Insiders</div>
+                            <div class="startmenu-item-options"></div>
+                        </li>
+                    </ul>
                 </div>
-            </div>
-            <div class="window-content">
-                Conteúdo da janela aqui<br><br><br><br><br>
-                Conteúdo da janela aqui<br>
-            </div>
-        </div>
-        <div class="startmenu background-noise" id="startmenu">
-            <div class="startmenu-left-menu">
-                <div class="startmenu-left-menu-top">
-                    <div class="startmenu-left-menu-item icon-hamburger-white"></div>
-                </div>
-                <div class="startmenu-left-menu-bottom">
-                    <div class="startmenu-left-menu-item icon-useravatar">
-                        <img src="https://i.picsum.photos/id/338/64/64.jpg">
+                <div class="startmenu-tiles">
+                    <div class="tile-group">
+                        <div class="tile-group-title">Teste de grupo</div>
+                        <div class="tile-row">
+                            <div class="tile-column">
+                                <div class="tile-wide" style="background-color: #0e93a4"></div>
+                                <div class="tile-wide" style="background-color: #404040"></div>
+                                <div class="tile-medium" style="background-color: #175ab5"></div>
+                                <div class="tile-column">
+                                    <div class="tile-small" style="background-color: #229337"></div>
+                                    <div class="tile-small" style="background-color: #1951a8"></div>
+                                    <div class="tile-small" style="background-color: #c74e33"></div>
+                                    <div class="tile-small" style="background-color: #801589"></div>
+                                </div>
+                            </div>
+                            <div class="tile-column">
+                                <div class="tile-wide" style="background-color: #5c3fa9"></div>
+                                <div class="tile-large" style="background-color: #6c7682"></div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="startmenu-left-menu-item icon-documents-white"></div>
-                    <div class="startmenu-left-menu-item icon-photos-white"></div>
-                    <div class="startmenu-left-menu-item icon-settings-white"></div>
-                    <div class="startmenu-left-menu-item icon-shutdown-white"></div>
+                    <div class="tile-group">
+                        <div class="tile-group-title">Teste de grupo 2</div>
+                        <div class="tile-row">
+                            <div class="tile-column">
+                                <div class="tile-medium" style="background-color: #987654"></div>
+                                <div class="tile-column">
+                                    <div class="tile-small" style="background-color: #a62544"></div>
+                                    <div class="tile-small" style="background-color: #d05533"></div>
+                                    <div class="tile-small" style="background-color: #10880d"></div>
+                                    <div class="tile-small" style="background-color: #9a0e95"></div>
+                                </div>
+                                <div class="tile-medium" style="background-color: #3171db"></div>
+                                <div class="tile-medium" style="background-color: #cc5736"></div>
+                                <div class="tile-wide" style="background-color: #0e890d"></div>
+                            </div>
+                            <div class="tile-column">
+                                <div class="tile-wide" style="background-color: #982640"></div>
+                                <div class="tile-wide" style="background-color: #0fa9dd"></div>
+                                <div class="tile-medium" style="background-color: #a72547"></div>
+                                <div class="tile-medium" style="background-color: #593ca6"></div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="startmenu-programs">
-                <ul class="startmenu-program-section">
-                    <li class="startmenu-program">
-                        <div class="program-title">A</div>
-                    </li>
-                    <li class="startmenu-program">
-                        <div class="program-icon icon-photoshop"></div>
-                        <div class="program-title">Adobe Photoshop CC 2019</div>
-                        <div class="program-options"></div>
-                    </li>
-                    <li class="startmenu-program">
-                        <div class="program-icon icon-premiere"></div>
-                        <div class="program-title">Adobe Premiere Pro 2019</div>
-                        <div class="program-options"></div>
-                    </li>
-                    <li class="startmenu-program">
-                        <div class="program-icon icon-adobexd"></div>
-                        <div class="program-title">Adobe XD</div>
-                        <div class="program-options"></div>
-                    </li>
-                    <li class="startmenu-program">
-                        <div class="program-icon icon-clock-white"></div>
-                        <div class="program-title">Alarmes e Relógio</div>
-                        <div class="program-options"></div>
-                    </li>
-                    <li class="startmenu-program">
-                        <div class="program-icon icon-androidstudio"></div>
-                        <div class="program-title">Android Studio</div>
-                        <div class="program-options"></div>
-                    </li>
+            <div class="taskbar">
+                <ul class="taskbar-startmenu">
+                    <li class="taskbar-item icon-dynamic-startbutton" data-win10-script="toggleStartMenu"></li>
                 </ul>
-                <ul class="startmenu-program-section">
-                    <li class="startmenu-program">
-                        <div class="program-title">C</div>
-                    </li>
-                    <li class="startmenu-program">
-                        <div class="program-icon icon-calc-white"></div>
-                        <div class="program-title">Calculadora</div>
-                        <div class="program-options"></div>
-                    </li>
-                    <li class="startmenu-program">
-                        <div class="program-icon icon-calendar-white"></div>
-                        <div class="program-title">Calendário</div>
-                        <div class="program-options"></div>
-                    </li>
-                    <li class="startmenu-program">
-                        <div class="program-icon icon-camera-white"></div>
-                        <div class="program-title">Câmera</div>
-                        <div class="program-options"></div>
-                    </li>
-                    <li class="startmenu-program">
-                        <div class="program-icon icon-weather-white"></div>
-                        <div class="program-title">Clima</div>
-                        <div class="program-options"></div>
-                    </li>
-                    <li class="startmenu-program">
-                        <div class="program-icon icon-settings-white"></div>
-                        <div class="program-title">Configurações</div>
-                        <div class="program-options"></div>
-                    </li>
+                <ul class="taskbar-programs">
+                    <li class="taskbar-item"><img src="assets/icons/programs/file-explorer.png"></li>
+                    <li class="taskbar-item opened"><img src="assets/icons/programs/store.png"></li>
+                    <li class="taskbar-item opened focused"><img src="assets/icons/programs/code.png"></li>
+                    <li class="taskbar-item opened"><img src="assets/icons/programs/calculator.png"></li>
+                    <li class="taskbar-item"><img src="assets/icons/programs/browser.png"></li>
+                    <li class="taskbar-item"><img src="assets/icons/programs/settings.png"></li>
                 </ul>
-                <ul class="startmenu-program-section">
-                    <li class="startmenu-program">
-                        <div class="program-title">E</div>
-                    </li>
-                    <li class="startmenu-program">
-                        <div class="program-icon icon-eclipse"></div>
-                        <div class="program-title">Eclipse</div>
-                        <div class="program-options"></div>
-                    </li>
+                <ul class="taskbar-notifications">
+                    <li class="taskbar-item icon-volume" data-volume="2"></li>
+                    <li class="taskbar-item icon-ethernet" data-connection="1"></li>
+                    <li class="taskbar-item icon-wifi" data-connection="0"></li>
+                    <li class="taskbar-item taskbar-item-text">POR<br>PTB2</li>
+                    <li class="taskbar-item taskbar-item-text">02:01<br>24/01/2020</li>
+                    <li class="taskbar-item icon-notification" data-notifications="1"></li>
+                    <li class="taskbar-item taskbar-item-show-desktop"></li>
                 </ul>
-                <ul class="startmenu-program-section">
-                    <li class="startmenu-program">
-                        <div class="program-title">E</div>
-                    </li>
-                    <li class="startmenu-program">
-                        <div class="program-icon icon-movies-white"></div>
-                        <div class="program-title">Filmes</div>
-                        <div class="program-options"></div>
-                    </li>
-                    <li class="startmenu-program">
-                        <div class="program-icon icon-photos-white"></div>
-                        <div class="program-title">Fotos</div>
-                        <div class="program-options"></div>
-                    </li>
-                </ul>
-                <ul class="startmenu-program-section">
-                    <li class="startmenu-program">
-                        <div class="program-title">G</div>
-                    </li>
-                    <li class="startmenu-program">
-                        <div class="program-icon icon-chrome"></div>
-                        <div class="program-title">Google Chrome</div>
-                        <div class="program-options"></div>
-                    </li>
-                </ul>
-                <ul class="startmenu-program-section">
-                    <li class="startmenu-program">
-                        <div class="program-title">M</div>
-                    </li>
-                    <li class="startmenu-program">
-                        <div class="program-icon icon-ms-edge"></div>
-                        <div class="program-title">Microsoft Edge</div>
-                        <div class="program-options"></div>
-                    </li>
-                    <li class="startmenu-program">
-                        <div class="program-icon icon-ms-store"></div>
-                        <div class="program-title">Microsoft Store</div>
-                        <div class="program-options"></div>
-                    </li>
-                    <li class="startmenu-program">
-                        <div class="program-icon icon-minecraft"></div>
-                        <div class="program-title">Minecraft</div>
-                        <div class="program-options"></div>
-                    </li>
-                    <li class="startmenu-program">
-                        <div class="program-icon icon-minecraft-educational"></div>
-                        <div class="program-title">Minecraft: Education Edition</div>
-                        <div class="program-options"></div>
-                    </li>
-                </ul>
-                <ul class="startmenu-program-section">
-                    <li class="startmenu-program">
-                        <div class="program-title">V</div>
-                    </li>
-                    <li class="startmenu-program">
-                        <div class="program-icon icon-vscode" style="background-color: #282828"></div>
-                        <div class="program-title">Visual Studio Code</div>
-                        <div class="program-options"></div>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div class="taskbar background-noise">
-            <div class="taskbar-startbutton">
-                <div class="taskbar-item startmenu-icon" id="startmenu-toggle-button"></div>
-            </div>
-            <div class="taskbar-windows">
-                <div class="taskbar-item icon-explorer focus opened"></div>
-                <div class="taskbar-item icon-chrome opened"></div>
-                <div class="taskbar-item icon-vscode"></div>
-                <div class="taskbar-item"></div>
-            </div>
-            <div class="taskbar-right">
-
             </div>
         </div>
     </body>

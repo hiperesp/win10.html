@@ -1,0 +1,74 @@
+
+.win10 .taskbar {
+    position: absolute;
+    display: flex;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+    background-color: hsl(200deg, 50%, 5%, 75%);
+    background-image: url('../icons/noise.svg');
+    backdrop-filter: blur(10px);
+}
+.win10 .taskbar ul {
+    list-style-type: none;
+}
+.win10 .taskbar-startmenu {
+    margin-right: 2px;
+}
+.win10 .taskbar-programs {
+    flex: 1;
+    display: flex;
+}
+.win10 .taskbar-notifications {
+    display: flex;
+}
+.win10 .taskbar-item {
+    min-width: 24px;
+    min-height: 24px;
+    padding: 8px 12px;
+    margin-right: 1px;
+    background-size: 24px;
+    font-size: 12px;
+    line-height: 1.5;
+}
+.win10 .taskbar-notifications .taskbar-item {
+    padding: 8px 3px;
+}
+.win10 .taskbar-notifications .taskbar-item-text {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding: 0px 6px;
+    color: #ffffff;
+}
+.win10 .taskbar-notifications .taskbar-item-show-desktop {
+    padding: 8px 2px;
+    margin-left: 7px;
+    margin-right: 0px;
+    min-width: 0px;
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-left-color: #ffffff;
+}
+.win10 .taskbar-item.focused,
+.win10 .taskbar-item:hover {
+    background-color: hsla(0deg, 0%, 100%, 15%);
+}
+.win10 .taskbar-item:active {
+    background-color: hsla(0deg, 0%, 100%, 5%);
+}
+.win10 .taskbar-programs .taskbar-item.opened,
+.win10 .taskbar-programs .taskbar-item.focused {
+    min-height: 22px;
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+    border-bottom-color: hsla(0deg, 0%, 100%, 50%);
+}
+.win10 .taskbar-item.focused:hover {
+    background-color: hsla(0deg, 0%, 100%, 25%);
+}
+.win10 .taskbar-item.focused:active {
+    background-color: hsla(0deg, 0%, 100%, 20%);
+}
+
